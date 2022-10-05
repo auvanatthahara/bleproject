@@ -26,11 +26,14 @@ function anim(time) {
   }
 }
 
-move.onclick = e => {
-  nextX = +x_in.value || 0;
-  nextY = +y_in.value || 0;
+function moveanim(){
+  nextX = +x_in.value;
+  nextY = +y_in.value;
   anim();
 }
+
+var move = document.getElementById('move');
+move.onclick = function() {moveanim()};
 
 // OP's code
 
