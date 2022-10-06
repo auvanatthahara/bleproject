@@ -32,14 +32,13 @@ function moveanim(){
   anim();
 }
 
-var move = document.getElementById('move');
-move.onclick = function() {moveanim()};
+/* var move = document.getElementById('move');
+move.onclick = function() {moveanim()}; */
 
 // OP's code
 
 var WIDTH = 600;
 var HEIGHT = 400;
-
 var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 
@@ -55,7 +54,7 @@ function clear() {
 
 function draw(x, y) {
   clear(WIDTH, HEIGHT);
-  ctx.fillStyle = "purple";
+  ctx.fillStyle = "black";
   circle(x, y, r);
 }
 

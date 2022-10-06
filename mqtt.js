@@ -1,15 +1,9 @@
-<html>
-
-<head>
-    <title>Attempt 1</title>
-    <script src="D:/Magang/Skripsi/ESP32 CODE/MQTT Websockets/pahojs/paho-mqtt.js" type="text/javascript"></script>
-    <script type="text/javascript" language="javascript">
         // Create a client instance
         var host = "10.10.148.220";
         var port = 9001;
         var coordinateX;
         var coordinateY;
-        client = new Paho.MQTT.Client(host, Number(port), "clientId");
+        client = new Paho.MQTT.Client(host, Number(port), "Web Interface");
 
         // set callback handlers
         client.onConnectionLost = onConnectionLost;
@@ -41,27 +35,15 @@
             if (message.destinationName == "espX") {
                 coordinateX = message.payloadString;
                 /* console.log("onMessageArrived: X " + coordinateX); */
-                document.getElementById("xCoor").innerHTML = coordinateX;
+                document.getElementById("x_in").value = coordinateX;
 
                 return coordinateX;
             }
             else if (message.destinationName == "espY") {
                 coordinateY = message.payloadString;
                 /* console.log("onMessageArrived: Y " + coordinateY); */
-                document.getElementById("yCoor").innerHTML = coordinateY;
+                document.getElementById("y_in").value = coordinateY;
 
                 return coordinateY;
             }
         }
-    </script>
-</head>
-
-<body onload="onMessageArrived()">
-    <h1>Simple Value UI</h1>
-    <p id="xCoor"></p>
-    <p id="yCoor"></p>
-    <!-- <h3>This is the value of X coordinate : <span><input id="xCoor"></span></h3>
-    <h3>This is the value of Y coordinate : <span><input id="yCoor"></span></h3> -->
-</body>
-
-</html>
