@@ -59,3 +59,4 @@ function draw(x, y) {
 }
 
 draw(x, y);
+setInterval(moveanim, 1000);

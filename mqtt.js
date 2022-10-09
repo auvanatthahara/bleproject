@@ -1,5 +1,5 @@
         // Create a client instance
-        var host = "10.10.148.220";
+        var host = "192.168.4.136";
         var port = 9001;
         var coordinateX;
         var coordinateY;
