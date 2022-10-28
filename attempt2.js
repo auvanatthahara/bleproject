@@ -1,7 +1,7 @@
 var x = 100;
 var y = 50;
 var r = 10;
-var duration = 1000; // in ms
+var duration = 500; // in ms
 var nextX, nextY;
 var startTime;
 
@@ -32,13 +32,10 @@ function moveanim(){
   anim();
 }
 
-/* var move = document.getElementById('move');
-move.onclick = function() {moveanim()}; */
-
 // OP's code
 
-var WIDTH = 600;
-var HEIGHT = 400;
+var WIDTH = 1300;
+var HEIGHT = 200;
 var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 
@@ -54,7 +51,7 @@ function clear() {
 
 function draw(x, y) {
   clear(WIDTH, HEIGHT);
-  ctx.fillStyle = "black";
+  // ctx.fillStyle = "black";
   circle(x, y, r);
 }
 

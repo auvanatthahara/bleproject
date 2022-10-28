@@ -1,5 +1,5 @@
         // Create a client instance
-        var host = "192.168.4.136";
+        var host = "10.10.154.149";
         var port = 9001;
         var coordinateX;
         var coordinateY;
@@ -36,13 +36,20 @@
                 coordinateX = message.payloadString;
                 /* console.log("onMessageArrived: X " + coordinateX); */
                 document.getElementById("x_in").value = coordinateX;
+                document.getElementById("x_in_txt").innerHTML = "X = "+coordinateX;
 
                 return coordinateX;
             }
             else if (message.destinationName == "espY") {
                 coordinateY = message.payloadString;
                 /* console.log("onMessageArrived: Y " + coordinateY); */
-                document.getElementById("y_in").value = coordinateY;
+                var coor_y = -1;
+                var y = coordinateY;
+                if(coor_y != -1){
+                    y = coor_y;
+                }
+                document.getElementById("y_in").value = y;
+                document.getElementById("y_in_txt").innerHTML = "Y = "+y;
 
                 return coordinateY;
             }
