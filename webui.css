@@ -1,0 +1,29 @@
+#layout {
+    position: relative; 
+    width: 1300px; 
+    height: 200px; 
+    border: 1px solid black; 
+    margin: 0 auto; 
+    margin-top: 20px;
+}
+
+.door {
+    position: absolute;
+    width: 80px;
+    background-color: black;
+    height: 3px;
+    top: 0; 
+    /* animation: 2s linear infinite; 
+    transform-origin: top left; */
+}
+
+#bullet {
+    position: absolute; 
+    transition: all .5s linear; 
+    /* animation: highlight 2s linear infinite;  */
+    width: 30px; 
+    height: 30px; 
+    background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbzY7QDEqCDDmwhwQBBuDRq54FZt2CI5L7lQ&usqp=CAU'); 
+    background-size: contain; 
+    border-radius: 50px; 
+}

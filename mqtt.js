@@ -36,20 +36,18 @@
                 coordinateX = message.payloadString;
                 /* console.log("onMessageArrived: X " + coordinateX); */
                 document.getElementById("x_in").value = coordinateX;
-                document.getElementById("x_in_txt").innerHTML = "X = "+coordinateX;
+                document.querySelector("#bullet").style.left = coordinateX;
+                /* document.getElementById("x_in_txt").innerHTML = "X = "+coordinateX; */
 
                 return coordinateX;
             }
+            
             else if (message.destinationName == "espY") {
                 coordinateY = message.payloadString;
                 /* console.log("onMessageArrived: Y " + coordinateY); */
-                var coor_y = -1;
-                var y = coordinateY;
-                if(coor_y != -1){
-                    y = coor_y;
-                }
-                document.getElementById("y_in").value = y;
-                document.getElementById("y_in_txt").innerHTML = "Y = "+y;
+                document.getElementById("y_in").value = coordinateY;
+                document.querySelector("#bullet").style.top = coordinateY;
+                /* document.getElementById("y_in_txt").innerHTML = "Y = "+coordinateY; */
 
                 return coordinateY;
             }
